@@ -1,0 +1,14 @@
+<h1>Index Articles </h1>
+
+<div class="row">
+<% @articles.each do |art| %>
+  <div class="col-md-3">
+    <div class="container">
+      <h2><%= link_to art.headline, article_path(art) %> </h2>
+      <h3><%= art.lead %></h3>
+      <p><%= art.body %></p>
+    </div>
+  </div>
+<% end %>
+
+</div>

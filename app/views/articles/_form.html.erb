@@ -1,0 +1,6 @@
+<%= simple_form_for @article do |f| %>
+    <%= f.input :headline, label: "Titulo Noticia"%>
+    <%= f.input :lead, label: "Subtitulo de la Noticia"%>
+    <%= f.input :body, label: "Cuerpo de la Noticia"%>
+    <%= f.button :submit%>
+<% end %>
