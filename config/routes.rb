@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
+  
+  ActiveAdmin.routes(self)
   resources :articles do
-    resources :comments
+    resources :comentarios
   end
   root 'articles#index'
 end

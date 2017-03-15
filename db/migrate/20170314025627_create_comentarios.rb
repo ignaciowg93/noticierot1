@@ -1,6 +1,6 @@
-class CreateComments < ActiveRecord::Migration[5.0]
+class CreateComentarios < ActiveRecord::Migration[5.0]
   def change
-    create_table :comments do |t|
+    create_table :comentarios do |t|
       t.string :name
       t.string :content
 

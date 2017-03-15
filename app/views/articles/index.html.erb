@@ -1,14 +1,28 @@
 <h1>Index Articles </h1>
-
+<%= will_paginate @articles %>
 <div class="row">
 <% @articles.each do |art| %>
-  <div class="col-md-3">
-    <div class="container">
-      <h2><%= link_to art.headline, article_path(art) %> </h2>
-      <h3><%= art.lead %></h3>
-      <p><%= art.body %></p>
+  <div class="col-md-8">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-xs-4">
+                    <h2 class="panel-title"><h2><%= link_to art.headline, article_path(art) %> </h2>
+                </div>
+                <div class="col-xs-8">
+                     <h3><%= art.created_at %></h3>
+                </div>
+
+            </div>
+        </div>
+        <div class="panel-body">
+            <h3><%= art.lead %></h3>
+            <p><%= truncate(art.body,:length => 250) %></p>
+            <p>Comentarios   :<span class="badge"><%= art.comentarios.length %> </span></p>
+        </div>
     </div>
   </div>
 <% end %>
+
 
 </div>
